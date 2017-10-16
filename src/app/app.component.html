@@ -1,0 +1,31 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" *ngIf="featureList['login']">
+                <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item" *ngIf="featureList['register']">
+                <a routerLink="/register" routerLinkActive="active" class="nav-link">Register</a>
+            </li>
+            <li class="nav-item" *ngIf="featureList['task']">
+                <a routerLink="/task" routerLinkActive="active" class="nav-link">Tasks</a>
+            </li>
+            <li class="nav-item" *ngIf="featureList['user']">
+                <a routerLink="/user" routerLinkActive="active" class="nav-link">Users</a>
+            </li>
+            <li class="nav-item" *ngIf="featureList['logout']">
+                <a routerLink="/logout" routerLinkActive="active" class="nav-link">Log out</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
